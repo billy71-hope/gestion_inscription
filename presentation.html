@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Découvrez l'histoire, les valeurs et la philosophie de La Sainte Trinité Honoré. Une école d'excellence fondée en 2011 à Cotonou, de la maternelle au terminale.">
+  <meta name="keywords" content="histoire école, valeurs éducatives, école privée Cotonou, Sainte Trinité Honoré présentation">
+  <meta name="author" content="La Sainte Trinité Honoré">
+  <title>Présentation de l'école — La Sainte Trinité Honoré - Notre histoire et nos valeurs</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap');
+
+    :root {
+      --green-deep: #1a4a2e;
+      --green-mid: #2d7a4f;
+      --green-light: #4caf75;
+      --green-pale: #e8f5ee;
+      --gold: #c9a84c;
+      --gold-light: #f0d98a;
+      --white: #ffffff;
+      --off-white: #f8faf9;
+      --gray-100: #f0f4f2;
+      --gray-500: #6b7c72;
+      --gray-700: #3a4a40;
+      --text-dark: #1c2b22;
+      --shadow-sm: 0 2px 8px rgba(26,74,46,.10);
+      --shadow-md: 0 6px 24px rgba(26,74,46,.14);
+      --shadow-lg: 0 16px 48px rgba(26,74,46,.18);
+      --radius: 12px;
+      --radius-lg: 20px;
+      --transition: all .3s cubic-bezier(.4,0,.2,1);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family: 'Source Serif 4', Georgia, serif; color: var(--text-dark); background: var(--white); line-height: 1.7; }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+
+    h1, h2, h3 { font-family: 'Playfair Display', serif; line-height: 1.2; color: var(--green-deep); }
+    h1 { font-size: clamp(1.8rem, 5vw, 3.8rem); font-weight: 800; }
+    h2 { font-size: clamp(1.4rem, 3.5vw, 2.6rem); font-weight: 700; }
+    h3 { font-size: clamp(1.1rem, 2.5vw, 1.7rem); font-weight: 600; }
+    p { font-size: 1.05rem; color: var(--gray-700); }
+
+    .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+    .section-tag { display: inline-block; font-family: 'Lato', sans-serif; font-size: .8rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--green-mid); background: var(--green-pale); padding: .35rem 1rem; border-radius: 50px; margin-bottom: 1rem; }
+    .section-title { margin-bottom: .5rem; }
+    .text-center { text-align: center; }
+    .btn { display: inline-flex; align-items: center; gap: .5rem; padding: .85rem 2rem; border-radius: 50px; font-family: 'Lato', sans-serif; font-weight: 700; font-size: .95rem; transition: var(--transition); }
+    .btn-primary { background: var(--green-mid); color: var(--white); }
+    .btn-primary:hover { background: var(--green-deep); transform: translateY(-2px); }
+    .btn-white { background: var(--white); color: var(--green-deep); }
+    .btn-white:hover { background: var(--green-pale); transform: translateY(-2px); }
+
+    header { background: var(--white); box-shadow: var(--shadow-sm); position: sticky; top: 0; z-index: 1000; }
+    nav { display: flex; align-items: center; justify-content: space-between; padding: .9rem 0; }
+    .logo { display: flex; align-items: center; gap: .9rem; }
+    .logo img { width: 58px; height: 58px; object-fit: cover; border-radius: 0; }
+    .logo-name { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 800; color: var(--green-deep); }
+    .logo-tagline { font-family: 'Lato', sans-serif; font-size: .7rem; color: var(--green-mid); letter-spacing: .08em; text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; gap: .2rem; }
+    .nav-links a { font-family: 'Lato', sans-serif; font-size: .88rem; font-weight: 700; color: var(--gray-700); padding: .5rem .85rem; border-radius: 8px; transition: var(--transition); position: relative; }
+    .nav-links a:hover, .nav-links a.active { color: var(--green-mid); }
+    .nav-links a.active::after { content: ''; position: absolute; bottom: 2px; left: .85rem; right: .85rem; height: 2px; background: var(--green-mid); }
+    .nav-links .btn-nav { background: var(--green-mid); color: var(--white); padding: .5rem 1.2rem; border-radius: 50px; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--green-deep); border-radius: 2px; }
+
+    .page-hero { background: linear-gradient(135deg, var(--green-deep), var(--green-mid)); color: var(--white); padding: 5rem 0 4rem; text-align: center; }
+    .page-hero h1 { color: var(--white); margin-bottom: .8rem; }
+    .page-hero p { color: rgba(255,255,255,.8); }
+    .breadcrumb { display: flex; align-items: center; gap: .5rem; justify-content: center; font-family: 'Lato', sans-serif; font-size: .82rem; color: rgba(255,255,255,.6); margin-bottom: 1rem; }
+    .breadcrumb a:hover { color: var(--white); }
+
+    .mobile-grid-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; }
+    .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
+    .cycle-card { background: var(--white); border-radius: var(--radius-lg); padding: 2rem 1.5rem; box-shadow: var(--shadow-sm); border: 1px solid var(--gray-100); transition: var(--transition); position: relative; overflow: hidden; }
+    .cycle-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--green-mid); }
+    .cycle-card h3 { margin-bottom: .5rem; font-size: 1.2rem; }
+    .cycle-card p { font-size: .9rem; color: var(--gray-500); }
+    .activite-item { background: var(--green-pale); border-radius: var(--radius); padding: 1.5rem; text-align: center; transition: var(--transition); }
+    .activite-item h4 { font-size: 1rem; margin-bottom: .4rem; color: var(--green-deep); }
+    .activite-item p { font-size: .85rem; color: var(--gray-500); }
+
+    footer { background: var(--text-dark); color: rgba(255,255,255,.75); padding: 4rem 0 1.5rem; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+    .footer-brand .logo-name { color: var(--white); }
+    .footer-brand p { font-size: .88rem; margin-top: 1rem; }
+    .footer-col h5 { font-family: 'Lato', sans-serif; font-size: .82rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--white); margin-bottom: 1.2rem; }
+    .footer-col ul li { margin-bottom: .6rem; }
+    .footer-col ul li a { font-size: .88rem; color: rgba(255,255,255,.65); transition: var(--transition); }
+    .footer-col ul li a:hover { color: var(--green-light); }
+    .footer-social { display: flex; gap: .7rem; margin-top: 1.2rem; }
+    .social-btn { width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,.08); display: flex; align-items: center; justify-content: center; transition: var(--transition); }
+    .social-btn:hover { background: var(--green-mid); color: var(--white); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,.08); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; font-size: .8rem; flex-wrap: wrap; }
+    .footer-bottom a { color: var(--green-light); }
+
+    .whatsapp-float { position: fixed; bottom: 2rem; right: 2rem; z-index: 9999; }
+    .whatsapp-btn { display: flex; align-items: center; gap: .7rem; background: #25D366; color: var(--white); padding: .85rem 1.4rem; border-radius: 50px; font-family: 'Lato', sans-serif; font-weight: 700; transition: var(--transition); }
+    .whatsapp-btn:hover { transform: translateY(-3px); }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--white); padding: 1rem; }
+      .nav-links.open { display: flex; }
+      .hamburger { display: flex; }
+      .mobile-grid-2col { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .whatsapp-btn span { display: none; }
+      .whatsapp-btn { width: 52px; height: 52px; padding: 0; border-radius: 50%; justify-content: center; }
+      .whatsapp-btn i { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <a href="index.html" class="logo">
+        <img src="https://placehold.co/58x58/1a4a2e/white?text=STH" alt="Logo La Sainte Trinité Honoré">
+        <div class="logo-text">
+          <div class="logo-name">La Sainte Trinité Honoré</div>
+          <div class="logo-tagline">Amélioration continue aujourd'hui, mieux qu'hier, et pire que demain</div>
+        </div>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Accueil</a>
+        <a href="presentation.html" class="active">L'école</a>
+        <a href="cycles.html">Nos cycles</a>
+        <a href="frais.html">Scolarité</a>
+        <a href="resultats.html">Résultats</a>
+        <a href="equipe.html">Équipe</a>
+        <a href="galerie.html">Galerie</a>
+        <a href="contact.html">Contact</a>
+        <a href="inscription.html" class="btn-nav">S'inscrire</a>
+        <a href="mentions-legales.html">Mentions légales</a>
+      </div>
+      <div class="hamburger"><span></span><span></span><span></span></div>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Accueil</a><span class="sep">/</span><span>L'école</span></div>
+    <h1>Notre école</h1>
+    <p>Histoire, vision, valeurs et infrastructures</p>
+  </div>
+</section>
+
+<section style="padding:5rem 0; background:var(--white);">
+  <div class="container">
+    <div class="mobile-grid-2col">
+      <div>
+        <span class="section-tag">Présentation générale</span>
+        <h2>Un établissement au service de l'excellence</h2>
+        <p style="margin-top:1rem;">Fondée en Octobre 2011, <strong>La Sainte Trinité Honoré</strong> est un établissement privé d'enseignement général qui accueille des élèves de la Maternelle au Terminale dans un cadre éducatif exemplaire.</p>
+        <p style="margin-top:1rem;">Notre école est reconnue pour la rigueur de son enseignement, la qualité de son corps enseignant, et les excellents résultats aux examens nationaux.</p>
+        <p style="margin-top:1rem;">La Sainte Trinité Honoré, c'est bien plus qu'une école : c'est une communauté où la discipline, la bienveillance et l'excellence coexistent harmonieusement.</p>
+      </div>
+      <div><img src="https://placehold.co/600x500/2d7a4f/white?text=Bâtiment+STH" alt="Bâtiment principal de La Sainte Trinité Honoré" style="border-radius:var(--radius-lg); box-shadow:var(--shadow-lg);"></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding:5rem 0; background:var(--off-white);">
+  <div class="container">
+    <div class="text-center"><span class="section-tag">Nos Valeurs</span><h2 class="section-title">Ce qui nous définit</h2></div>
+    <div class="grid-3" style="margin-top:2.5rem;">
+      <div class="cycle-card"><h3>Excellence</h3><p>Nous visons les meilleurs résultats pour chaque élève.</p></div>
+      <div class="cycle-card"><h3>Discipline</h3><p>Un cadre structuré et bienveillant.</p></div>
+      <div class="cycle-card"><h3>Épanouissement</h3><p>Chaque enfant est unique, nous cultivons ses talents.</p></div>
+      <div class="cycle-card"><h3>Respect</h3><p>Le respect mutuel entre tous.</p></div>
+      <div class="cycle-card"><h3>Chrétienté</h3><p>Nous croyons en Dieu et le mettons au centre.</p></div>
+      <div class="cycle-card"><h3>Citoyenneté</h3><p>Former de bons citoyens béninois.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding:5rem 0; background:var(--white);">
+  <div class="container">
+    <div class="text-center"><span class="section-tag"><i class="fa-solid fa-timeline"></i> Notre Histoire</span><h2 class="section-title">15 ans d'excellence éducative</h2></div>
+    <div style="max-width:800px; margin:2.5rem auto 0;">
+      <div style="display:flex; gap:1.5rem; margin-bottom:2rem;"><div style="background:var(--green-mid); color:white; width:52px; height:52px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:800;">2011</div><div><h4>Fondation</h4><p>Ouverture de la Maternelle et du Primaire.</p></div></div>
+      <div style="display:flex; gap:1.5rem; margin-bottom:2rem;"><div style="background:var(--green-mid); color:white; width:52px; height:52px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:800;">2014</div><div><h4>Ouverture du collège</h4><p>Classes de 6ème à 3ème.</p></div></div>
+      <div style="display:flex; gap:1.5rem; margin-bottom:2rem;"><div style="background:var(--green-mid); color:white; width:52px; height:52px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:800;">2017</div><div><h4>Extension lycée</h4><p>Ouverture des séries littéraires et scientifiques.</p></div></div>
+      <div style="display:flex; gap:1.5rem;"><div style="background:var(--gold); color:white; width:52px; height:52px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:800;">2026</div><div><h4>Aujourd'hui</h4><p>Plus de 1 500 élèves formés.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding:5rem 0; background:var(--off-white);">
+  <div class="container">
+    <div class="text-center"><span class="section-tag">Infrastructures</span><h2 class="section-title">Des équipements modernes</h2></div>
+    <div class="grid-4" style="margin-top:2.5rem;">
+      <div class="activite-item"><h4>Salles de classe</h4><p>Spacieuses et bien éclairées</p></div>
+      <div class="activite-item"><h4>Bibliothèque</h4><p>Riche fonds documentaire</p></div>
+      <div class="activite-item"><h4>Salle informatique</h4><p>Ordinateurs modernes</p></div>
+      <div class="activite-item"><h4>Cour & Terrains</h4><p>Espaces de récréation</p></div>
+      <div class="activite-item"><h4>Réfectoire</h4><p>Repas équilibrés</p></div>
+      <div class="activite-item"><h4>Laboratoire sciences</h4><p>Équipements complets</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="whatsapp-float"><a href="https://wa.me/22997000000" target="_blank" class="whatsapp-btn"><i class="fa-brands fa-whatsapp"></i><span>WhatsApp</span></a></div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="logo"><img src="https://placehold.co/58x58/1a4a2e/white?text=STH" alt="Logo STH"><div class="logo-text"><div class="logo-name">La Sainte Trinité Honoré</div><div class="logo-tagline">Amélioration continue aujourd'hui, mieux qu'hier, et pire que demain</div></div></div><p>Un établissement d'excellence au Bénin.</p></div>
+      <div class="footer-col"><h5>Cycles</h5><ul><li><a href="cycles.html#maternelle">Maternelle</a></li><li><a href="cycles.html#primaire">Primaire</a></li><li><a href="cycles.html#college">Collège</a></li><li><a href="cycles.html#lycee">Lycée</a></li></ul></div>
+      <div class="footer-col"><h5>Contact</h5><ul><li><i class="fa-solid fa-location-dot"></i> Cotonou, Bénin</li><li><a href="tel:+22997000000">+229 97 00 00 00</a></li><li><a href="mailto:contact@sth-ecole.bj">contact@sth-ecole.bj</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2025 La Sainte Trinité Honoré. Développé par NOVATECH-BENIN</span><a href="index.html">← Retour à l'accueil</a></div>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.querySelector('.hamburger'), navLinks = document.querySelector('.nav-links');
+  if (hamburger) hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  window.addEventListener('scroll', () => { document.querySelector('header').classList.toggle('scrolled', window.scrollY > 50); });
+</script>
+</body>
+</html>

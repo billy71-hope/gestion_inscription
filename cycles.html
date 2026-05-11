@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Découvrez les cycles scolaires de La Sainte Trinité Honoré : maternelle, primaire, collège et lycée. Horaires, programmes et objectifs pédagogiques détaillés.">
+  <meta name="keywords" content="cycle maternelle, primaire, collège, lycée, programme scolaire, horaires école, Sainte Trinité Honoré">
+  <meta name="author" content="La Sainte Trinité Honoré">
+  <title>Nos cycles scolaires — La Sainte Trinité Honoré - De la maternelle au terminale</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap');
+
+    :root {
+      --green-deep: #1a4a2e;
+      --green-mid: #2d7a4f;
+      --green-light: #4caf75;
+      --green-pale: #e8f5ee;
+      --gold: #c9a84c;
+      --gold-light: #f0d98a;
+      --white: #ffffff;
+      --off-white: #f8faf9;
+      --gray-100: #f0f4f2;
+      --gray-500: #6b7c72;
+      --gray-700: #3a4a40;
+      --text-dark: #1c2b22;
+      --shadow-sm: 0 2px 8px rgba(26,74,46,.10);
+      --shadow-md: 0 6px 24px rgba(26,74,46,.14);
+      --shadow-lg: 0 16px 48px rgba(26,74,46,.18);
+      --radius: 12px;
+      --radius-lg: 20px;
+      --transition: all .3s cubic-bezier(.4,0,.2,1);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family: 'Source Serif 4', Georgia, serif; color: var(--text-dark); background: var(--white); line-height: 1.7; }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+
+    h1, h2, h3, h4 { font-family: 'Playfair Display', serif; line-height: 1.2; color: var(--green-deep); }
+    h1 { font-size: clamp(1.8rem, 5vw, 3.8rem); font-weight: 800; }
+    h2 { font-size: clamp(1.4rem, 3.5vw, 2.6rem); font-weight: 700; }
+    h3 { font-size: clamp(1.1rem, 2.5vw, 1.7rem); font-weight: 600; }
+    p { font-size: 1.05rem; color: var(--gray-700); }
+
+    .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+    .section-tag { display: inline-block; font-family: 'Lato', sans-serif; font-size: .8rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--green-mid); background: var(--green-pale); padding: .35rem 1rem; border-radius: 50px; margin-bottom: 1rem; }
+    .btn { display: inline-flex; align-items: center; gap: .5rem; padding: .85rem 2rem; border-radius: 50px; font-family: 'Lato', sans-serif; font-weight: 700; font-size: .95rem; transition: var(--transition); }
+    .btn-white { background: var(--white); color: var(--green-deep); }
+    .btn-white:hover { background: var(--green-pale); transform: translateY(-2px); }
+    .btn-outline { border: 2px solid rgba(255,255,255,.5); color: #fff; background: transparent; }
+
+    header { background: var(--white); box-shadow: var(--shadow-sm); position: sticky; top: 0; z-index: 1000; }
+    nav { display: flex; align-items: center; justify-content: space-between; padding: .9rem 0; }
+    .logo { display: flex; align-items: center; gap: .9rem; }
+    .logo img { width: 58px; height: 58px; object-fit: cover; border-radius: 0; }
+    .logo-name { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 800; color: var(--green-deep); }
+    .logo-tagline { font-family: 'Lato', sans-serif; font-size: .7rem; color: var(--green-mid); letter-spacing: .08em; text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; gap: .2rem; }
+    .nav-links a { font-family: 'Lato', sans-serif; font-size: .88rem; font-weight: 700; color: var(--gray-700); padding: .5rem .85rem; border-radius: 8px; transition: var(--transition); position: relative; }
+    .nav-links a:hover, .nav-links a.active { color: var(--green-mid); }
+    .nav-links a.active::after { content: ''; position: absolute; bottom: 2px; left: .85rem; right: .85rem; height: 2px; background: var(--green-mid); }
+    .nav-links .btn-nav { background: var(--green-mid); color: var(--white); padding: .5rem 1.2rem; border-radius: 50px; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--green-deep); border-radius: 2px; }
+
+    .page-hero { background: linear-gradient(135deg, var(--green-deep), var(--green-mid)); color: var(--white); padding: 5rem 0 4rem; text-align: center; }
+    .page-hero h1 { color: var(--white); margin-bottom: .8rem; }
+    .page-hero p { color: rgba(255,255,255,.8); }
+    .breadcrumb { display: flex; align-items: center; gap: .5rem; justify-content: center; font-family: 'Lato', sans-serif; font-size: .82rem; color: rgba(255,255,255,.6); margin-bottom: 1rem; }
+
+    .mobile-grid-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+    .horaire-card { background: var(--white); border-radius: var(--radius); padding: 1.5rem; border-left: 4px solid var(--green-mid); box-shadow: var(--shadow-sm); }
+    .horaire-card h4 { margin-bottom: .8rem; color: var(--green-deep); }
+    .horaire-slot { display: flex; align-items: center; gap: .6rem; font-family: 'Lato', sans-serif; font-size: .88rem; color: var(--gray-700); padding: .3rem 0; border-bottom: 1px solid var(--gray-100); }
+    .horaire-slot:last-child { border-bottom: none; }
+    .pause-badge { display: inline-block; background: var(--gold-light); color: var(--gray-700); font-size: .75rem; padding: .1rem .6rem; border-radius: 50px; font-weight: 700; }
+    .welcome-values { display: flex; flex-direction: column; gap: .8rem; margin-top: 1.8rem; }
+    .value-item { display: flex; align-items: center; gap: .8rem; font-family: 'Lato', sans-serif; font-size: .95rem; color: var(--gray-700); }
+    .value-icon { width: 36px; height: 36px; border-radius: 50%; background: var(--green-pale); display: flex; align-items: center; justify-content: center; color: var(--green-mid); }
+
+    footer { background: var(--text-dark); color: rgba(255,255,255,.75); padding: 4rem 0 1.5rem; margin-top: 3rem; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,.08); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; font-size: .8rem; flex-wrap: wrap; }
+    .footer-bottom a { color: var(--green-light); }
+
+    .whatsapp-float { position: fixed; bottom: 2rem; right: 2rem; z-index: 9999; }
+    .whatsapp-btn { display: flex; align-items: center; gap: .7rem; background: #25D366; color: var(--white); padding: .85rem 1.4rem; border-radius: 50px; font-family: 'Lato', sans-serif; font-weight: 700; transition: var(--transition); }
+    .whatsapp-btn:hover { transform: translateY(-3px); }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--white); padding: 1rem; }
+      .nav-links.open { display: flex; }
+      .hamburger { display: flex; }
+      .mobile-grid-2col { grid-template-columns: 1fr; gap: 2rem; }
+      .whatsapp-btn span { display: none; }
+      .whatsapp-btn { width: 52px; height: 52px; padding: 0; border-radius: 50%; justify-content: center; }
+      .whatsapp-btn i { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <a href="index.html" class="logo">
+        <img src="https://placehold.co/58x58/1a4a2e/white?text=STH" alt="Logo STH">
+        <div class="logo-text">
+          <div class="logo-name">La Sainte Trinité Honoré</div>
+          <div class="logo-tagline">Amélioration continue aujourd'hui, mieux qu'hier, et pire que demain</div>
+        </div>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Accueil</a>
+        <a href="presentation.html">L'École</a>
+        <a href="cycles.html" class="active">Nos cycles</a>
+        <a href="frais.html">Scolarité</a>
+        <a href="resultats.html">Résultats</a>
+        <a href="equipe.html">Équipe</a>
+        <a href="galerie.html">Galerie</a>
+        <a href="contact.html">Contact</a>
+        <a href="inscription.html" class="btn-nav">S'inscrire</a>
+        <a href="mentions-legales.html">Mentions légales</a>
+      </div>
+      <div class="hamburger"><span></span><span></span><span></span></div>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Accueil</a><span class="sep">/</span><span>Nos cycles</span></div>
+    <h1>Nos cycles scolaires</h1>
+    <p>De la Maternelle au Terminale — Un parcours d'excellence structuré et bienveillant</p>
+  </div>
+</section>
+
+<section id="maternelle" style="padding:5rem 0; background:var(--white);">
+  <div class="container">
+    <div class="mobile-grid-2col">
+      <div>
+        <span class="section-tag">Maternelle</span>
+        <h2>L'éveil par le jeu et la créativité</h2>
+        <p style="margin-top:1rem;">La section maternelle de la STH est un espace chaleureux et sécurisant où les tout-petits découvrent le monde à travers des activités ludiques et éducatives.</p>
+        <div class="horaire-card" style="margin-top:2rem;">
+          <h4><i class="fa-solid fa-clock"></i> Horaires Maternelle</h4>
+          <div class="horaire-slot"><i class="fa-solid fa-sun"></i> 8h00 – 15h00 (journée complète)</div>
+          <div class="horaire-slot"><i class="fa-solid fa-graduation-cap"></i> Petite, Moyenne, Grande Section</div>
+        </div>
+        <div class="welcome-values" style="margin-top:1.5rem;">
+          <div class="value-item"><div class="value-icon"><i class="fa-solid fa-check"></i></div> Activités d'éveil sensoriel et moteur</div>
+          <div class="value-item"><div class="value-icon"><i class="fa-solid fa-check"></i></div> Initiation à la lecture et aux chiffres</div>
+          <div class="value-item"><div class="value-icon"><i class="fa-solid fa-check"></i></div> Ateliers artistiques et créatifs</div>
+        </div>
+      </div>
+      <div><img src="https://placehold.co/600x500/4caf75/white?text=Classe+Maternelle" alt="Classe de maternelle à La Sainte Trinité Honoré" style="border-radius:var(--radius-lg); box-shadow:var(--shadow-lg);"></div>
+    </div>
+  </div>
+</section>
+
+<section id="primaire" style="padding:5rem 0; background:var(--off-white);">
+  <div class="container">
+    <div class="mobile-grid-2col">
+      <div><img src="https://placehold.co/600x500/2d7a4f/white?text=Classe+Primaire" alt="Classe primaire à La Sainte Trinité Honoré" style="border-radius:var(--radius-lg); box-shadow:var(--shadow-lg);"></div>
+      <div>
+        <span class="section-tag">Primaire</span>
+        <h2>Les fondations de l'excellence académique</h2>
+        <p style="margin-top:1rem;">Le cycle primaire de la STH pose les bases solides d'un parcours scolaire réussi. Nos élèves de CI à CM2 bénéficient d'une pédagogie active et rigoureuse.</p>
+        <div class="horaire-card" style="margin-top:2rem;">
+          <h4><i class="fa-solid fa-clock"></i> Horaires Primaire</h4>
+          <div class="horaire-slot"><i class="fa-solid fa-sun"></i> 8h00 – 15h00 (journée complète)</div>
+          <div class="horaire-slot"><i class="fa-solid fa-graduation-cap"></i> CI, CP, CE1, CE2, CM1, CM2</div>
+        </div>
+        <div class="welcome-values" style="margin-top:1.5rem;">
+          <div class="value-item"><div class="value-icon"><i class="fa-solid fa-check"></i></div> Cours de soutien et de révision</div>
+          <div class="value-item"><div class="value-icon"><i class="fa-solid fa-check"></i></div> Préparation au CEP dès le CM1</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="college" style="padding:5rem 0; background:var(--white);">
+  <div class="container">
+    <div class="mobile-grid-2col">
+      <div>
+        <span class="section-tag">Collège / Premier cycle</span>
+        <h2>L'approfondissement et la découverte</h2>
+        <p style="margin-top:1rem;">Le premier cycle accueille les élèves de la 6ème à la 3ème dans un cadre sérieux et structuré.</p>
+        <div class="horaire-card" style="margin-top:2rem; border-left-color:var(--gold);">
+          <h4><i class="fa-solid fa-clock" style="color:var(--gold);"></i> Horaires Collège</h4>
+          <div class="horaire-slot"><i class="fa-solid fa-sun"></i> Matin : 8h00 – 12h00</div>
+          <div class="horaire-slot"><i class="fa-solid fa-utensils"></i> Pause : 12h00 – 15h00 <span class="pause-badge">pause</span></div>
+          <div class="horaire-slot"><i class="fa-solid fa-cloud-sun"></i> Après-midi : 15h00 – 18h00</div>
+        </div>
+      </div>
+      <div><img src="https://placehold.co/600x500/1a4a2e/white?text=Classe+Collège" alt="Classe collège à La Sainte Trinité Honoré" style="border-radius:var(--radius-lg); box-shadow:var(--shadow-lg);"></div>
+    </div>
+  </div>
+</section>
+
+<section id="lycee" style="padding:5rem 0; background:var(--off-white);">
+  <div class="container">
+    <div class="mobile-grid-2col">
+      <div><img src="https://placehold.co/600x500/3a8f5e/white?text=Classe+Lycée" alt="Classe lycée à La Sainte Trinité Honoré" style="border-radius:var(--radius-lg); box-shadow:var(--shadow-lg);"></div>
+      <div>
+        <span class="section-tag">Lycée / Second cycle</span>
+        <h2>Vers le Baccalauréat et l'avenir</h2>
+        <p style="margin-top:1rem;">Le second cycle propose les séries scientifiques et littéraires en 2nde, 1ère et Terminale.</p>
+        <div class="horaire-card" style="margin-top:2rem; border-left-color:var(--gold);">
+          <h4><i class="fa-solid fa-clock" style="color:var(--gold);"></i> Horaires Lycée</h4>
+          <div class="horaire-slot"><i class="fa-solid fa-sun"></i> Matin : 7h00 – 12h00</div>
+          <div class="horaire-slot"><i class="fa-solid fa-utensils"></i> Pause : 12h00 – 15h00 <span class="pause-badge">pause</span></div>
+          <div class="horaire-slot"><i class="fa-solid fa-cloud-sun"></i> Après-midi : 15h00 – 18h00</div>
+        </div>
+        <div class="welcome-values" style="margin-top:1.5rem;">
+          <div class="value-item"><div class="value-icon"><i class="fa-solid fa-check"></i></div> Filières A, C, D et G</div>
+          <div class="value-item"><div class="value-icon"><i class="fa-solid fa-check"></i></div> Cours de révision intensifs pré-BAC</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding:4rem 0; background:linear-gradient(135deg, var(--green-deep), var(--green-mid));">
+  <div class="container" style="text-align:center;">
+    <h2 style="color:var(--white); margin-bottom:1rem;">Prêt à inscrire votre enfant ?</h2>
+    <p style="color:rgba(255,255,255,.8); margin-bottom:2rem;">Contactez-nous dès maintenant pour assurer la place de votre enfant.</p>
+    <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+      <a href="inscription.html" class="btn btn-white"><i class="fa-solid fa-pen-to-square"></i> Commencer l'inscription</a>
+      <a href="frais.html" class="btn btn-outline"><i class="fa-solid fa-coins"></i> Voir les frais</a>
+    </div>
+  </div>
+</section>
+
+<div class="whatsapp-float"><a href="https://wa.me/22997000000" target="_blank" class="whatsapp-btn"><i class="fa-brands fa-whatsapp"></i><span>WhatsApp</span></a></div>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© 2025 La Sainte Trinité Honoré. Développé par NOVATECH-BENIN</span>
+      <a href="index.html">← Retour à l'accueil</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.querySelector('.hamburger'), navLinks = document.querySelector('.nav-links');
+  if (hamburger) hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  window.addEventListener('scroll', () => { document.querySelector('header').classList.toggle('scrolled', window.scrollY > 50); });
+</script>
+</body>
+</html>

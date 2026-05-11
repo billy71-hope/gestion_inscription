@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Découvrez l'équipe pédagogique de La Sainte Trinité Honoré : direction, enseignants qualifiés de la maternelle au lycée. Une équipe dévouée à la réussite de vos enfants.">
+  <meta name="keywords" content="équipe enseignante, directeur école, professeurs, corps enseignant, Sainte Trinité Honoré">
+  <meta name="author" content="La Sainte Trinité Honoré">
+  <title>Notre équipe pédagogique — La Sainte Trinité Honoré - Enseignants qualifiés</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap');
+
+    :root {
+      --green-deep: #1a4a2e;
+      --green-mid: #2d7a4f;
+      --green-light: #4caf75;
+      --green-pale: #e8f5ee;
+      --gold: #c9a84c;
+      --white: #ffffff;
+      --off-white: #f8faf9;
+      --gray-100: #f0f4f2;
+      --gray-500: #6b7c72;
+      --gray-700: #3a4a40;
+      --text-dark: #1c2b22;
+      --shadow-sm: 0 2px 8px rgba(26,74,46,.10);
+      --shadow-md: 0 6px 24px rgba(26,74,46,.14);
+      --radius: 12px;
+      --radius-lg: 20px;
+      --transition: all .3s cubic-bezier(.4,0,.2,1);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family: 'Source Serif 4', Georgia, serif; color: var(--text-dark); background: var(--white); line-height: 1.7; }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+
+    h1, h2, h3, h4 { font-family: 'Playfair Display', serif; line-height: 1.2; color: var(--green-deep); }
+    h1 { font-size: clamp(1.8rem, 5vw, 3.8rem); font-weight: 800; }
+    h2 { font-size: clamp(1.4rem, 3.5vw, 2.6rem); font-weight: 700; }
+    p { font-size: 1.05rem; color: var(--gray-700); }
+
+    .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+    .section-tag { display: inline-block; font-family: 'Lato', sans-serif; font-size: .8rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--green-mid); background: var(--green-pale); padding: .35rem 1rem; border-radius: 50px; margin-bottom: 1rem; }
+    .section-title { margin-bottom: .5rem; }
+    .text-center { text-align: center; }
+
+    header { background: var(--white); box-shadow: var(--shadow-sm); position: sticky; top: 0; z-index: 1000; }
+    nav { display: flex; align-items: center; justify-content: space-between; padding: .9rem 0; }
+    .logo { display: flex; align-items: center; gap: .9rem; }
+    .logo img { width: 58px; height: 58px; object-fit: cover; border-radius: 0; }
+    .logo-name { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 800; color: var(--green-deep); }
+    .logo-tagline { font-family: 'Lato', sans-serif; font-size: .7rem; color: var(--green-mid); letter-spacing: .08em; text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; gap: .2rem; }
+    .nav-links a { font-family: 'Lato', sans-serif; font-size: .88rem; font-weight: 700; color: var(--gray-700); padding: .5rem .85rem; border-radius: 8px; transition: var(--transition); position: relative; }
+    .nav-links a:hover, .nav-links a.active { color: var(--green-mid); }
+    .nav-links a.active::after { content: ''; position: absolute; bottom: 2px; left: .85rem; right: .85rem; height: 2px; background: var(--green-mid); }
+    .nav-links .btn-nav { background: var(--green-mid); color: var(--white); padding: .5rem 1.2rem; border-radius: 50px; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--green-deep); border-radius: 2px; }
+
+    .page-hero { background: linear-gradient(135deg, var(--green-deep), var(--green-mid)); color: var(--white); padding: 5rem 0 4rem; text-align: center; }
+    .page-hero h1 { color: var(--white); margin-bottom: .8rem; }
+    .page-hero p { color: rgba(255,255,255,.8); }
+    .breadcrumb { display: flex; align-items: center; gap: .5rem; justify-content: center; font-family: 'Lato', sans-serif; font-size: .82rem; color: rgba(255,255,255,.6); margin-bottom: 1rem; }
+
+    .results-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+    .result-card { background: var(--green-pale); border-radius: var(--radius-lg); padding: 1.5rem; text-align: center; }
+    .result-number { font-family: 'Playfair Display', serif; font-size: 2.5rem; font-weight: 800; color: var(--green-mid); }
+
+    .team-section { margin-bottom: 3rem; }
+    .department-title { font-family: 'Lato', sans-serif; font-size: .78rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--green-mid); background: var(--green-pale); padding: .4rem 1.2rem; border-radius: 50px; display: inline-block; margin-bottom: 1.5rem; }
+    .staff-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.2rem; }
+    .team-card-v2 { background: var(--white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); display: flex; gap: 0; transition: var(--transition); border: 1px solid var(--gray-100); }
+    .team-card-v2:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+    .team-photo-v2 { width: 110px; flex-shrink: 0; background: var(--green-pale); display: flex; align-items: center; justify-content: center; }
+    .team-photo-v2 img { width: 110px; height: 110px; object-fit: cover; }
+    .team-info-v2 { padding: 1rem 1.2rem; flex: 1; }
+    .team-info-v2 h4 { margin-bottom: .2rem; font-size: 1rem; }
+    .team-info-v2 .role { font-family: 'Lato', sans-serif; font-size: .78rem; color: var(--green-mid); font-weight: 700; text-transform: uppercase; margin-bottom: .3rem; }
+    .team-info-v2 .matiere { font-family: 'Lato', sans-serif; font-size: .85rem; color: var(--gray-500); margin-bottom: .3rem; }
+    .team-info-v2 .diplome { font-family: 'Lato', sans-serif; font-size: .75rem; color: var(--gray-500); display: flex; align-items: center; gap: .4rem; }
+
+    .org-chart { background: var(--green-pale); border-radius: var(--radius-lg); padding: 2rem; text-align: center; margin: 2rem 0; }
+    .org-node { display: inline-flex; flex-direction: column; align-items: center; gap: .4rem; }
+    .org-box { background: var(--white); border: 2px solid var(--green-mid); border-radius: var(--radius); padding: .6rem 1.2rem; font-family: 'Lato', sans-serif; font-weight: 700; font-size: .85rem; color: var(--green-deep); min-width: 140px; }
+    .org-box.top { background: var(--green-deep); color: var(--white); border-color: var(--green-deep); }
+    .org-line { width: 2px; height: 20px; background: var(--green-mid); }
+    .org-row { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin-top: 1rem; }
+
+    footer { background: var(--text-dark); color: rgba(255,255,255,.75); padding: 3rem 0 1.5rem; margin-top: 3rem; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,.08); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; font-size: .8rem; flex-wrap: wrap; }
+    .footer-bottom a { color: var(--green-light); }
+
+    .whatsapp-float { position: fixed; bottom: 2rem; right: 2rem; z-index: 9999; }
+    .whatsapp-btn { display: flex; align-items: center; gap: .7rem; background: #25D366; color: var(--white); padding: .85rem 1.4rem; border-radius: 50px; font-family: 'Lato', sans-serif; font-weight: 700; transition: var(--transition); }
+    .whatsapp-btn:hover { transform: translateY(-3px); }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--white); padding: 1rem; }
+      .nav-links.open { display: flex; }
+      .hamburger { display: flex; }
+      .staff-grid { grid-template-columns: 1fr; }
+      .team-card-v2 { flex-direction: column; }
+      .team-photo-v2 { width: 100%; height: 120px; }
+      .team-photo-v2 img { width: 100%; height: 120px; object-fit: cover; }
+      .org-box { min-width: 100px; padding: .4rem .8rem; font-size: .75rem; }
+      .org-row { gap: .8rem; }
+      .whatsapp-btn span { display: none; }
+      .whatsapp-btn { width: 52px; height: 52px; padding: 0; border-radius: 50%; justify-content: center; }
+      .whatsapp-btn i { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <a href="index.html" class="logo">
+        <img src="https://placehold.co/58x58/1a4a2e/white?text=STH" alt="Logo STH">
+        <div class="logo-text">
+          <div class="logo-name">La Sainte Trinité Honoré</div>
+          <div class="logo-tagline">Amélioration continue aujourd'hui, mieux qu'hier, et pire que demain</div>
+        </div>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Accueil</a>
+        <a href="presentation.html">L'École</a>
+        <a href="cycles.html">Nos cycles</a>
+        <a href="frais.html">Scolarité</a>
+        <a href="resultats.html">Résultats</a>
+        <a href="equipe.html" class="active">Équipe</a>
+        <a href="galerie.html">Galerie</a>
+        <a href="contact.html">Contact</a>
+        <a href="inscription.html" class="btn-nav">S'inscrire</a>
+        <a href="mentions-legales.html">Mentions légales</a>
+      </div>
+      <div class="hamburger"><span></span><span></span><span></span></div>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Accueil</a><span class="sep">/</span><span>Notre équipe</span></div>
+    <h1>Notre équipe pédagogique</h1>
+    <p>Des enseignants passionnés, qualifiés et dévoués à la réussite de vos enfants</p>
+  </div>
+</section>
+
+<section style="padding:4rem 0;">
+  <div class="container">
+    <div style="max-width:800px; margin:0 auto; text-align:center;">
+      <span class="section-tag">Notre équipe</span>
+      <h2 class="section-title">Des professionnels au service de l'excellence</h2>
+    </div>
+    <div class="results-grid" style="margin-top:2rem;">
+      <div class="result-card"><div class="result-number">30+</div><div>Enseignants qualifiés</div></div>
+      <div class="result-card"><div class="result-number">8+</div><div>Années d'expérience moy.</div></div>
+      <div class="result-card"><div class="result-number">100%</div><div>Diplômés</div></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding:2rem 0 3rem; background:var(--off-white);">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-tag"><i class="fa-solid fa-sitemap"></i> Organisation</span>
+      <h2 class="section-title">Structure administrative</h2>
+    </div>
+    <div class="org-chart">
+      <div class="org-node"><div class="org-box top">Direction Générale</div><div class="org-line"></div></div>
+      <div class="org-row">
+        <div class="org-node"><div class="org-line"></div><div class="org-box">DAAC</div></div>
+        <div class="org-node"><div class="org-line"></div><div class="org-box">Directeur des Études</div></div>
+        <div class="org-node"><div class="org-line"></div><div class="org-box">Secrétariat</div></div>
+      </div>
+      <div class="org-row" style="margin-top:1rem;">
+        <div class="org-node"><div class="org-box">Maternelle</div></div>
+        <div class="org-node"><div class="org-box">Primaire</div></div>
+        <div class="org-node"><div class="org-box">Secondaire</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding:4rem 0;">
+  <div class="container">
+    <div class="team-section">
+      <div class="department-title"><i class="fa-solid fa-star"></i> Direction</div>
+      <div class="staff-grid">
+        <div class="team-card-v2"><div class="team-photo-v2"><img src="https://placehold.co/110x110/2d7a4f/white?text=Directeur" alt="Directeur général STH"></div><div class="team-info-v2"><h4>Mr ACAKPO Honoré B.</h4><div class="role">Fondateur & Directeur Général</div><div class="matiere">Pilotage stratégique</div><div class="diplome"><i class="fa-solid fa-graduation-cap"></i> Sciences de l'Éducation</div></div></div>
+        <div class="team-card-v2"><div class="team-photo-v2"><img src="https://placehold.co/110x110/4caf75/white?text=DAAC" alt="DAAC STH"></div><div class="team-info-v2"><h4>Mr KOUASSI Jean</h4><div class="role">DAAC</div><div class="matiere">Suivi disciplinaire</div><div class="diplome"><i class="fa-solid fa-graduation-cap"></i> Administration scolaire</div></div></div>
+        <div class="team-card-v2"><div class="team-photo-v2"><img src="https://placehold.co/110x110/1a4a2e/white?text=Censeur" alt="Directrice des études STH"></div><div class="team-info-v2"><h4>Mme DOSSOU Afi</h4><div class="role">Directrice des Études</div><div class="matiere">Supervision pédagogique</div><div class="diplome"><i class="fa-solid fa-graduation-cap"></i> CAPES</div></div></div>
+      </div>
+    </div>
+
+    <div class="team-section">
+      <div class="department-title">Enseignants — Maternelle</div>
+      <div class="staff-grid">
+        <div class="team-card-v2"><div class="team-photo-v2"><img src="https://placehold.co/110x110/c9a84c/white?text=PS" alt="Enseignante maternelle"></div><div class="team-info-v2"><h4>Mme AGBO Clarisse</h4><div class="role">Petite Section</div><div class="matiere">Éveil, langage, psychomotricité</div></div></div>
+        <div class="team-card-v2"><div class="team-photo-v2"><img src="https://placehold.co/110x110/gold/white?text=GS" alt="Enseignante maternelle"></div><div class="team-info-v2"><h4>Mme ADJOVI Rose</h4><div class="role">Grande Section</div><div class="matiere">Pré-lecture, pré-calcul</div></div></div>
+      </div>
+    </div>
+
+    <div class="team-section">
+      <div class="department-title">Enseignants — Primaire</div>
+      <div class="staff-grid">
+        <div class="team-card-v2"><div class="team-photo-v2"><img src="https://placehold.co/110x110/2d7a4f/white?text=CI" alt="Maître CI"></div><div class="team-info-v2"><h4>Mr HOUNKPATIN Paul</h4><div class="role">Maître CI</div><div class="matiere">Français, Maths, Éveil</div></div></div>
+        <div class="team-card-v2"><div class="team-photo-v2"><img src="https://placehold.co/110x110/4caf75/white?text=CP" alt="Maître CP"></div><div class="team-info-v2"><h4>Mme BOKO Lucie</h4><div class="role">Maître CP</div><div class="matiere">Français, Maths</div></div></div>
+        <div class="team-card-v2"><div class="team-photo-v2"><img src="https://placehold.co/110x110/1a4a2e/white?text=CE1" alt="Maître CE1"></div><div class="team-info-v2"><h4>Mr TOKPONOU Marc</h4><div class="role">Maître CE1</div><div class="matiere">Français, Maths, Sciences</div></div></div>
+        <div class="team-card-v2"><div class="team-photo-v2"><img src="https://placehold.co/110x110/gold/white?text=CM1" alt="Maître CM1"></div><div class="team-info-v2"><h4>Mme GBAGUIDI Rachel</h4><div class="role">Maître CM1</div><div class="matiere">Préparation CEP</div></div></div>
+        <div class="team-card-v2"><div class="team-photo-v2"><img src="https://placehold.co/110x110/2d7a4f/white?text=CM2" alt="Maître CM2"></div><div class="team-info-v2"><h4>Mr MEDECIN Joseph</h4><div class="role">Maître CM2</div><div class="matiere">Préparation CEP</div></div></div>
+      </div>
+    </div>
+
+    <div class="team-section">
+      <div class="department-title">Enseignants — Collège & Lycée</div>
+      <div class="staff-grid">
+        <div class="team-card-v2"><div class="team-photo-v2"><img src="https://placehold.co/110x110/1a4a2e/white?text=Français" alt="Professeur de français"></div><div class="team-info-v2"><h4>Mme HOUNKPONOU Martine</h4><div class="role">Professeur de Français</div><div class="matiere">Français & Littérature</div><div class="diplome"><i class="fa-solid fa-graduation-cap"></i> Maîtrise Lettres</div></div></div>
+        <div class="team-card-v2"><div class="team-photo-v2"><img src="https://placehold.co/110x110/4caf75/white?text=Anglais" alt="Professeur d'anglais"></div><div class="team-info-v2"><h4>Mr JOHNSON Eric</h4><div class="role">Professeur d'Anglais</div><div class="matiere">Anglais LV1</div><div class="diplome"><i class="fa-solid fa-graduation-cap"></i> Licence Anglais</div></div></div>
+        <div class="team-card-v2"><div class="team-photo-v2"><img src="https://placehold.co/110x110/2d7a4f/white?text=Maths" alt="Professeur de mathématiques"></div><div class="team-info-v2"><h4>Mr DOSSOU Anges</h4><div class="role">Professeur de Maths</div><div class="matiere">Mathématiques</div><div class="diplome"><i class="fa-solid fa-graduation-cap"></i> CAPES Maths</div></div></div>
+        <div class="team-card-v2"><div class="team-photo-v2"><img src="https://placehold.co/110x110/3a8f5e/white?text=SVT" alt="Professeur de SVT"></div><div class="team-info-v2"><h4>Mme YAKOUBU Fatima</h4><div class="role">Professeur de SVT</div><div class="matiere">Sciences de la Vie</div></div></div>
+        <div class="team-card-v2"><div class="team-photo-v2"><img src="https://placehold.co/110x110/c9a84c/white?text=PC" alt="Professeur de physique-chimie"></div><div class="team-info-v2"><h4>Mr KPATCHAVI David</h4><div class="role">Professeur de PC</div><div class="matiere">Physique-Chimie</div></div></div>
+        <div class="team-card-v2"><div class="team-photo-v2"><img src="https://placehold.co/110x110/1a4a2e/white?text=HG" alt="Professeur d'histoire-géographie"></div><div class="team-info-v2"><h4>Mme ADJADJI Christine</h4><div class="role">Professeur d'HG</div><div class="matiere">Histoire-Géographie</div></div></div>
+        <div class="team-card-v2"><div class="team-photo-v2"><img src="https://placehold.co/110x110/2d7a4f/white?text=Philo" alt="Professeur de philosophie"></div><div class="team-info-v2"><h4>Mr HOUNKPONOU Bienvenu</h4><div class="role">Professeur de Philo</div><div class="matiere">Philosophie</div></div></div>
+        <div class="team-card-v2"><div class="team-photo-v2"><img src="https://placehold.co/110x110/4caf75/white?text=EPS" alt="Professeur d'EPS"></div><div class="team-info-v2"><h4>Mr ADJOVI Martial</h4><div class="role">Professeur d'EPS</div><div class="matiere">Sport</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="whatsapp-float"><a href="https://wa.me/22997000000" target="_blank" class="whatsapp-btn"><i class="fa-brands fa-whatsapp"></i><span>WhatsApp</span></a></div>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© 2025 La Sainte Trinité Honoré. Développé par NOVATECH-BENIN</span>
+      <a href="index.html">← Retour à l'accueil</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.querySelector('.hamburger'), navLinks = document.querySelector('.nav-links');
+  if (hamburger) hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  window.addEventListener('scroll', () => { document.querySelector('header').classList.toggle('scrolled', window.scrollY > 50); });
+</script>
+</body>
+</html>

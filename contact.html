@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contactez La Sainte Trinité Honoré à Cotonou. Renseignements, inscriptions, rendez-vous. Répondez à toutes vos questions par téléphone, email ou WhatsApp.">
+  <meta name="keywords" content="contact école, téléphone école, email école, WhatsApp école, Sainte Trinité Honoré">
+  <meta name="author" content="La Sainte Trinité Honoré">
+  <title>Contact — La Sainte Trinité Honoré - Nous contacter à Cotonou</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap');
+
+    :root {
+      --green-deep: #1a4a2e;
+      --green-mid: #2d7a4f;
+      --green-light: #4caf75;
+      --green-pale: #e8f5ee;
+      --gold: #c9a84c;
+      --white: #ffffff;
+      --off-white: #f8faf9;
+      --gray-100: #f0f4f2;
+      --gray-500: #6b7c72;
+      --gray-700: #3a4a40;
+      --text-dark: #1c2b22;
+      --shadow-sm: 0 2px 8px rgba(26,74,46,.10);
+      --shadow-md: 0 6px 24px rgba(26,74,46,.14);
+      --radius: 12px;
+      --radius-lg: 20px;
+      --transition: all .3s cubic-bezier(.4,0,.2,1);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family: 'Source Serif 4', Georgia, serif; color: var(--text-dark); background: var(--white); line-height: 1.7; }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+
+    h1, h2, h3, h4 { font-family: 'Playfair Display', serif; line-height: 1.2; color: var(--green-deep); }
+    h1 { font-size: clamp(1.8rem, 5vw, 3.8rem); font-weight: 800; }
+    h2 { font-size: clamp(1.4rem, 3.5vw, 2.6rem); font-weight: 700; }
+    p { font-size: 1.05rem; color: var(--gray-700); }
+
+    .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+    .section-tag { display: inline-block; font-family: 'Lato', sans-serif; font-size: .8rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--green-mid); background: var(--green-pale); padding: .35rem 1rem; border-radius: 50px; margin-bottom: 1rem; }
+    .btn { display: inline-flex; align-items: center; gap: .5rem; padding: .85rem 2rem; border-radius: 50px; font-family: 'Lato', sans-serif; font-weight: 700; font-size: .95rem; transition: var(--transition); cursor: pointer; border: none; }
+    .btn-primary { background: var(--green-mid); color: var(--white); }
+    .btn-primary:hover { background: var(--green-deep); transform: translateY(-2px); }
+
+    header { background: var(--white); box-shadow: var(--shadow-sm); position: sticky; top: 0; z-index: 1000; }
+    nav { display: flex; align-items: center; justify-content: space-between; padding: .9rem 0; }
+    .logo { display: flex; align-items: center; gap: .9rem; }
+    .logo img { width: 58px; height: 58px; object-fit: cover; border-radius: 0; }
+    .logo-name { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 800; color: var(--green-deep); }
+    .logo-tagline { font-family: 'Lato', sans-serif; font-size: .7rem; color: var(--green-mid); letter-spacing: .08em; text-transform: uppercase; line-height: 1.3; }
+    .nav-links { display: flex; align-items: center; gap: .2rem; }
+    .nav-links a { font-family: 'Lato', sans-serif; font-size: .88rem; font-weight: 700; color: var(--gray-700); padding: .5rem .85rem; border-radius: 8px; transition: var(--transition); position: relative; }
+    .nav-links a:hover, .nav-links a.active { color: var(--green-mid); }
+    .nav-links a.active::after { content: ''; position: absolute; bottom: 2px; left: .85rem; right: .85rem; height: 2px; background: var(--green-mid); }
+    .nav-links .btn-nav { background: var(--green-mid); color: var(--white); padding: .5rem 1.2rem; border-radius: 50px; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--green-deep); border-radius: 2px; }
+
+    .page-hero { background: linear-gradient(135deg, var(--green-deep), var(--green-mid)); color: var(--white); padding: 5rem 0 4rem; text-align: center; }
+    .page-hero h1 { color: var(--white); margin-bottom: .8rem; }
+    .page-hero p { color: rgba(255,255,255,.8); }
+
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; align-items: start; padding: 5rem 0; }
+    .contact-info { display: flex; flex-direction: column; gap: 1.5rem; }
+    .contact-block { display: flex; gap: 1rem; align-items: flex-start; }
+    .contact-icon { width: 48px; height: 48px; border-radius: 12px; background: var(--green-pale); display: flex; align-items: center; justify-content: center; color: var(--green-mid); font-size: 1.2rem; flex-shrink: 0; }
+    .contact-block h4 { margin-bottom: .2rem; font-size: 1rem; }
+    .contact-block p, .contact-block a { font-family: 'Lato', sans-serif; font-size: .9rem; color: var(--gray-500); }
+    .contact-block a:hover { color: var(--green-mid); }
+
+    .form-card { background: var(--off-white); border-radius: var(--radius-lg); padding: 2rem; box-shadow: var(--shadow-sm); }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+    .form-group { display: flex; flex-direction: column; gap: .4rem; margin-bottom: 1.2rem; }
+    .form-group label { font-family: 'Lato', sans-serif; font-size: .85rem; font-weight: 700; color: var(--gray-700); }
+    .form-group input, .form-group textarea, .form-group select { padding: .75rem 1rem; border: 2px solid var(--gray-100); border-radius: var(--radius); font-family: 'Source Serif 4', serif; font-size: .95rem; transition: var(--transition); }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus { outline: none; border-color: var(--green-mid); }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+
+    footer { background: var(--text-dark); color: rgba(255,255,255,.75); padding: 3rem 0 1.5rem; margin-top: 3rem; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,.08); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; font-size: .8rem; flex-wrap: wrap; }
+    .footer-bottom a { color: var(--green-light); }
+
+    .whatsapp-float { position: fixed; bottom: 2rem; right: 2rem; z-index: 9999; }
+    .whatsapp-btn { display: flex; align-items: center; gap: .7rem; background: #25D366; color: var(--white); padding: .85rem 1.4rem; border-radius: 50px; font-family: 'Lato', sans-serif; font-weight: 700; transition: var(--transition); }
+    .whatsapp-btn:hover { transform: translateY(-3px); }
+
+    .toast { position: fixed; bottom: 5rem; left: 50%; transform: translateX(-50%) translateY(100px); background: var(--green-deep); color: var(--white); padding: 1rem 2rem; border-radius: 50px; z-index: 9998; transition: var(--transition); opacity: 0; }
+    .toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--white); padding: 1rem; }
+      .nav-links.open { display: flex; }
+      .hamburger { display: flex; }
+      .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .form-row { grid-template-columns: 1fr; }
+      .whatsapp-btn span { display: none; }
+      .whatsapp-btn { width: 52px; height: 52px; padding: 0; border-radius: 50%; justify-content: center; }
+      .whatsapp-btn i { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <a href="index.html" class="logo">
+        <img src="https://placehold.co/58x58/1a4a2e/white?text=STH" alt="Logo STH">
+        <div class="logo-text">
+          <div class="logo-name">La Sainte Trinité Honoré</div>
+          <div class="logo-tagline">Amélioration continue aujourd'hui, mieux qu'hier, et pire que demain</div>
+        </div>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Accueil</a>
+        <a href="presentation.html">L'École</a>
+        <a href="cycles.html">Nos cycles</a>
+        <a href="frais.html">Scolarité</a>
+        <a href="resultats.html">Résultats</a>
+        <a href="equipe.html">Équipe</a>
+        <a href="galerie.html">Galerie</a>
+        <a href="contact.html" class="active">Contact</a>
+        <a href="inscription.html" class="btn-nav">S'inscrire</a>
+        <a href="mentions-legales.html">Mentions légales</a>
+      </div>
+      <div class="hamburger"><span></span><span></span><span></span></div>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <h1>Nous contacter</h1>
+    <p>Notre équipe est à votre disposition pour répondre à toutes vos questions</p>
+  </div>
+</section>
+
+<section class="contact-grid container">
+  <div>
+    <h2 style="margin-bottom:2rem;">Retrouvez-nous</h2>
+    <div class="contact-info">
+      <div class="contact-block"><div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div><div><h4>Adresse</h4><p>Cotonou, Bénin<br>Quartier Zongo, 03 BP 1234</p></div></div>
+      <div class="contact-block"><div class="contact-icon"><i class="fa-solid fa-phone"></i></div><div><h4>Téléphone</h4><a href="tel:+22997000000">+229 97 00 00 00</a><br><a href="tel:+22997000001">+229 97 00 00 01</a></div></div>
+      <div class="contact-block"><div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div><div><h4>WhatsApp</h4><a href="https://wa.me/22997000000" target="_blank">+229 97 00 00 00</a><p style="font-size:.85rem;">Disponible Lun–Ven, 8h–17h</p></div></div>
+      <div class="contact-block"><div class="contact-icon"><i class="fa-solid fa-envelope"></i></div><div><h4>Email</h4><a href="mailto:contact@sth-ecole.bj">contact@sth-ecole.bj</a></div></div>
+      <div class="contact-block"><div class="contact-icon"><i class="fa-solid fa-clock"></i></div><div><h4>Horaires du Secrétariat</h4><p>Lundi – Vendredi : <strong>8h00 – 17h00</strong><br>Samedi : <strong>8h00 – 12h00</strong></p></div></div>
+    </div>
+  </div>
+  <div>
+    <div class="form-card">
+      <h3 style="margin-bottom:1.5rem;">Envoyez-nous un message</h3>
+      <form id="contactForm">
+        <div class="form-row">
+          <div class="form-group"><label>Nom complet *</label><input type="text" id="contactNom" placeholder="Votre nom" required></div>
+          <div class="form-group"><label>Téléphone *</label><input type="tel" id="contactTel" placeholder="+229XXXXXXXX" required></div>
+        </div>
+        <div class="form-group"><label>Sujet *</label><select id="contactSujet" required><option value="">— Choisir un sujet —</option><option>Inscription</option><option>Informations frais</option><option>Résultats scolaires</option><option>Rendez-vous direction</option><option>Autre</option></select></div>
+        <div class="form-group"><label>Message *</label><textarea id="contactMessage" rows="5" placeholder="Votre message..." required></textarea></div>
+        <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;"><i class="fa-solid fa-paper-plane"></i> Envoyer via WhatsApp</button>
+      </form>
+      <div id="contactStatus" style="margin-top:1rem; text-align:center; font-family:'Lato',sans-serif; font-size:.85rem;"></div>
+    </div>
+  </div>
+</section>
+
+<div class="whatsapp-float"><a href="https://wa.me/22997000000" target="_blank" class="whatsapp-btn"><i class="fa-brands fa-whatsapp"></i><span>WhatsApp</span></a></div>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© 2025 La Sainte Trinité Honoré. Développé par NOVATECH-BENIN</span>
+      <a href="index.html">← Retour à l'accueil</a>
+    </div>
+  </div>
+</footer>
+
+<div id="toast" class="toast"></div>
+
+<script>
+  const hamburger = document.querySelector('.hamburger'), navLinks = document.querySelector('.nav-links');
+  if (hamburger) hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  window.addEventListener('scroll', () => { document.querySelector('header').classList.toggle('scrolled', window.scrollY > 50); });
+
+  function showToast(msg, isError = false) {
+    let toast = document.getElementById('toast');
+    toast.textContent = msg;
+    toast.style.background = isError ? '#e53e3e' : 'var(--green-deep)';
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 4000);
+  }
+
+  const contactForm = document.getElementById('contactForm');
+  const WHATSAPP_NUMBER = '22997000000';
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const nom = document.getElementById('contactNom').value.trim();
+      const tel = document.getElementById('contactTel').value.trim();
+      const sujet = document.getElementById('contactSujet').value;
+      const message = document.getElementById('contactMessage').value.trim();
+
+      if (!nom || !tel || !sujet || !message) {
+        showToast('Veuillez remplir tous les champs', true);
+        return;
+      }
+
+      const whatsappMsg = `📞 *NOUVEAU MESSAGE SITE STH*%0A%0A👤 *Nom:* ${encodeURIComponent(nom)}%0A📱 *Téléphone:* ${encodeURIComponent(tel)}%0A📋 *Sujet:* ${encodeURIComponent(sujet)}%0A *Message:* ${encodeURIComponent(message)}%0A%0A📅 ${new Date().toLocaleString('fr-BJ')}`;
+      
+      window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${whatsappMsg}`, '_blank');
+      showToast('Redirection vers WhatsApp... Envoyez le message !');
+      contactForm.reset();
+    });
+  }
+</script>
+</body>
+</html>
